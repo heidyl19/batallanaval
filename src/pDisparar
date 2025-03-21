@@ -1,10 +1,8 @@
 public class pDisparar{
 
-
-
-  public static void dispararjugador(int[]tableromaquina,Scanner scanner){
-    boolean DisparoExitoso=false;
-    while(!DisparoExitoso){
+public static void dispararjugador(int[]tableromaquina,Scanner scanner){
+      boolean DisparoExitoso=false;
+      while(!DisparoExitoso){
       System.out.println("ingresa una coordenada a la que quieres disparar");
       int coordenada=scanner.nextInt();
 
@@ -13,7 +11,7 @@ public class pDisparar{
             tableromaquina[coordenada] = 2; // Marcar como tocado
             System.out.println("¡Impacto!");
         } else {
-            System.out.println("Agua...");
+            System.out.println("Agua");
         }
         DisparoExitoso = true;
     } else {
