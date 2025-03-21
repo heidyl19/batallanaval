@@ -1,0 +1,25 @@
+public class pDisparar{
+
+
+
+  public static void dispararjugador(int[]tableromaquina,Scanner scanner){
+    boolean DisparoExitoso=false;
+    while(!DisparoExitoso){
+      System.out.println("ingresa una coordenada a la que quieres disparar");
+      int coordenada=scanner.nextInt();
+
+      if (coordenada >= 0 && coordenada < tableromaquina.length) {
+        if (tableromaquina[coordenada] == 1) {
+            tableromaquina[coordenada] = 2; // Marcar como tocado
+            System.out.println("¡Impacto!");
+        } else {
+            System.out.println("Agua...");
+        }
+        DisparoExitoso = true;
+    } else {
+        System.out.println("Coordenada inválida, intenta de nuevo.");
+    }
+}
+  
+  }
+}
